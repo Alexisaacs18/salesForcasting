@@ -3,6 +3,7 @@
         {
             "id": 1,
             "last update": "11/27/23",
+            "Name": "Slack-AI",
             "rep": "Alex Isaacs",
             "users": "20",
             "mrr": 2549,
@@ -12,6 +13,7 @@
         {
             "id": 2,
             "last update": "11/29/23",
+            "Name": "SalesForce-NS",
             "rep": "Nick Sette",
             "users": "3",
             "mrr": 249,
@@ -21,6 +23,7 @@
         {
             "id": 3,
             "last update": "12/1/23",
+            "Name": "SalesLoft-SI",
             "rep": "Sean Inella",
             "users": "18",
             "mrr": 1469,
@@ -30,6 +33,7 @@
         {
             "id": 4,
             "last update": "11/20/23",
+            "Name": "Gong-NS",
             "rep": "Nick Sette",
             "users": "10",
             "mrr": 945,
@@ -39,6 +43,7 @@
         {
             "id": 5,
             "last update": "12/4/23",
+            "Name": "Outreach-AI",
             "rep": "Alex Isaacs",
             "users": "35",
             "mrr": 3500,
@@ -48,6 +53,7 @@
         {
             "id": 6,
             "last update": "12/3/23",
+            "Name": "SalesForce-SI",
             "rep": "Sean Inella",
             "users": "5",
             "mrr": 495,
@@ -57,6 +63,7 @@
         {
             "id": 7,
             "last update": "12/3/23",
+            "Name": "Lavender-NS",
             "rep": "Nick Sette",
             "users": "7",
             "mrr": 693,
@@ -66,6 +73,7 @@
         {
             "id": 8,
             "last update": "12/3/23",
+            "Name": "Trellus-AI",
             "rep": "Alex Isaacs",
             "users": "3",
             "mrr": 249,
