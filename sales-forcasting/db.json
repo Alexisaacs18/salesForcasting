@@ -1,0 +1,76 @@
+{
+    "pipeline": [
+        {
+            "id": 1,
+            "last update": "11/27/23",
+            "rep": "Alex Isaacs",
+            "users": "20",
+            "mrr": 2549,
+            "stage": "Evaluation",
+            "close": "12/24/23"
+        },
+        {
+            "id": 2,
+            "last update": "11/29/23",
+            "rep": "Nick Sette",
+            "users": "3",
+            "mrr": 249,
+            "stage": "Demo Complete",
+            "close": "12/11/23"
+        },
+        {
+            "id": 3,
+            "last update": "12/1/23",
+            "rep": "Sean Inella",
+            "users": "18",
+            "mrr": 1469,
+            "stage": "Approval",
+            "close": "12/7/23"
+        },
+        {
+            "id": 4,
+            "last update": "11/20/23",
+            "rep": "Nick Sette",
+            "users": "10",
+            "mrr": 945,
+            "stage": "Evaluation",
+            "close": "12/20/23"
+        },
+        {
+            "id": 5,
+            "last update": "12/4/23",
+            "rep": "Alex Isaacs",
+            "users": "35",
+            "mrr": 3500,
+            "stage": "Approval",
+            "close": "12/8/23"
+        },
+        {
+            "id": 6,
+            "last update": "12/3/23",
+            "rep": "Sean Inella",
+            "users": "5",
+            "mrr": 495,
+            "stage": "Evaluation",
+            "close": "12/15/23"
+        },
+        {
+            "id": 7,
+            "last update": "12/3/23",
+            "rep": "Nick Sette",
+            "users": "7",
+            "mrr": 693,
+            "stage": "Demo Complete",
+            "close": "12/27/23"
+        },
+        {
+            "id": 8,
+            "last update": "12/3/23",
+            "rep": "Alex Isaacs",
+            "users": "3",
+            "mrr": 249,
+            "stage": "Evaluation",
+            "close": "12/6/23"
+        }
+    ]
+}
