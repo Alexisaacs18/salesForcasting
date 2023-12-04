@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
 
-  const url = "http://localhost:3000/pipeline"
+  const url = "http://localhost:3001/pipeline"
 
   const [deals, setDeals] = useState([])
 
