@@ -5,16 +5,21 @@ import StagePage from './Components/StagePage';
 import ClosePage from './Components/ClosePage';
 import Header from './Components/Header';
 import './App.css';
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <RepPage />
-      <ClosePage />
-      <StagePage />
-      <PipelineContainer />
-    </div>
+    <PrimeReactProvider>
+      <div className="App">
+        <Header />
+        <RepPage />
+        <ClosePage />
+        <StagePage />
+        <PipelineContainer />
+      </div>
+    </PrimeReactProvider>
+
   );
 }
 

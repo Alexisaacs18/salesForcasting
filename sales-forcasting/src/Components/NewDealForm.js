@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Dropdown } from 'primereact/dropdown';
+
 
 function NewDealForm() {
     // fetch call to the stages engpoint and save those values in state
@@ -17,15 +19,19 @@ function NewDealForm() {
     }, [])
 
 
+
     const formOutline = {
         last_updated: '',
         name: '',
         rep: '',
         users: 0,
         monthly_recurring_revenue: 0,
-        stage_id: '',
         close: '',
+        stageInfo: {
+        }
     }
+
+    //When doing the post call, parse id from stageInfo 
 
     const [form, setForm] = useState(formOutline)
 
@@ -36,6 +42,9 @@ function NewDealForm() {
         })
     }
 
+    // <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" 
+    // placeholder="Select a City" className="w-full md:w-14rem" />
+
     return (
         <div className="NewDealForm">
             <form >
@@ -44,7 +53,10 @@ function NewDealForm() {
                 <input onChange={handleChange} value={form.rep} type="text" name="rep" placeholder="Rep" />
                 <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                 <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
-                <input onChange={handleChange} value={form.stage_id} type="text" name="stage_id" placeholder="Stage" />
+
+                <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
+                    placeholder="Select a Stage" className="w-full md:w-14rem" />
+
                 <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
                 <button type="submit">Add Deal</button>
             </form>
