@@ -2,6 +2,9 @@
 
 <img width="394" alt="Screen Shot 2023-11-13 at 3 41 54 PM" src="https://github.com/Alexisaacs18/salesForcasting/blob/main/sales-forcasting/assets/SalesForcasting.PNG?raw=true">
 
+<img width="394" alt="Screen Shot 2023-11-13 at 3 41 54 PM" src="https://github.com/Alexisaacs18/salesForcasting/blob/main/sales-forcasting/assets/DrawIo.PNG?raw=true">
+
+
 
 ## Description
 
