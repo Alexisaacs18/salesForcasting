@@ -74,6 +74,7 @@ JSON file used with json-server: db.json
 ## JSON-SERVER
 
 ## ENDPOINTS
+```
 Homepage
 Endpoint: /
 HTTP Verb: GET
@@ -145,6 +146,6 @@ Description: Retrieve information about the close stages, including the associat
     ]
   }
 }
-
+```
 
 
