@@ -16,10 +16,13 @@ function PipelineContainer() {
             .then(data => setDeals(data))
     }, [])
 
+    function newDealHandler(newDeal) {
+        setDeals([...deals, newDeal])
+    }
 
     return (
         <div>
-            <NewDealForm />
+            <NewDealForm url={url} newDealHandler={newDealHandler} />
             <Search />
             <table className="ui celled striped padded table">
                 <tbody>
