@@ -1,84 +1,144 @@
 {
-    "pipeline": [
+    "homepage": {
+        "message": "Welcome to the Sales Pipeline",
+        "pipeline_overview": {
+            // ... overview data
+        }
+    },
+    "deals": [
         {
             "id": 1,
             "last update": "11/27/23",
-            "Name": "Slack-AI",
+            "name": "Slack-AI",
             "rep": "Alex Isaacs",
             "users": "20",
-            "mrr": 2549,
+            "monthly_recurring_revenue": 2549,
             "stage": "Evaluation",
             "close": "12/24/23"
         },
         {
             "id": 2,
             "last update": "11/29/23",
-            "Name": "SalesForce-NS",
+            "name": "SalesForce-NS",
             "rep": "Nick Sette",
             "users": "3",
-            "mrr": 249,
+            "monthly_recurring_revenue": 249,
             "stage": "Demo Complete",
             "close": "12/11/23"
         },
         {
             "id": 3,
             "last update": "12/1/23",
-            "Name": "SalesLoft-SI",
-            "rep": "Sean Inella",
+            "name": "SalesLoft-SI",
+            "rep": "Sean Innella",
             "users": "18",
-            "mrr": 1469,
+            "monthly_recurring_revenue": 1469,
             "stage": "Approval",
             "close": "12/7/23"
         },
         {
             "id": 4,
             "last update": "11/20/23",
-            "Name": "Gong-NS",
+            "name": "Gong-NS",
             "rep": "Nick Sette",
             "users": "10",
-            "mrr": 945,
+            "monthly_recurring_revenue": 945,
             "stage": "Evaluation",
             "close": "12/20/23"
         },
         {
             "id": 5,
             "last update": "12/4/23",
-            "Name": "Outreach-AI",
+            "name": "Outreach-AI",
             "rep": "Alex Isaacs",
             "users": "35",
-            "mrr": 3500,
+            "monthly_recurring_revenue": 3500,
             "stage": "Approval",
             "close": "12/8/23"
         },
         {
             "id": 6,
             "last update": "12/3/23",
-            "Name": "SalesForce-SI",
+            "name": "SalesForce-SI",
             "rep": "Sean Inella",
             "users": "5",
-            "mrr": 495,
+            "monthly_recurring_revenue": 495,
             "stage": "Evaluation",
             "close": "12/15/23"
         },
         {
             "id": 7,
             "last update": "12/3/23",
-            "Name": "Lavender-NS",
+            "name": "Lavender-NS",
             "rep": "Nick Sette",
             "users": "7",
-            "mrr": 693,
+            "monthly_recurring_revenue": 693,
             "stage": "Demo Complete",
             "close": "12/27/23"
         },
         {
             "id": 8,
             "last update": "12/3/23",
-            "Name": "Trellus-AI",
+            "name": "Trellus-AI",
             "rep": "Alex Isaacs",
             "users": "3",
-            "mrr": 249,
+            "monthly_recurring_revenue": 249,
             "stage": "Evaluation",
             "close": "12/6/23"
         }
+    ],
+    "reps": [
+        {
+            "id": 1,
+            "name": "Alex Isaacs",
+            "monthly_recurring_revenue": 2549
+        },
+        {
+            "id": 2,
+            "name": "Nick Sette",
+            "monthly_recurring_revenue": 249
+        },
+        {
+            "id": 3,
+            "name": "Sean Innella",
+            "mrr": 1964  
+        }
+        // ... other reps
+    ],
+    "stages": [
+        {
+            "id": 1,
+            "name": "Demo Complete"
+        
+        },
+        {
+            "id": 2,
+            "name": "Evaluation"
+        
+        },
+        {
+            "id": 3,
+            "name": "Approval"
+        
+        },
+        {
+            "id": 4,
+            "name": "Pricing Negotiation"
+    
+        }
+        // ... other stages
+    ],
+    "closed": [
+        {
+            "id": 1,
+            "name": "Closed Won"
+        
+        },
+        {
+            "id": 2,
+            "name": "Closed Lost"
+    
+        }
+        // ... other close stages
     ]
 }
