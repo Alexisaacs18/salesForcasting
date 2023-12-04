@@ -14,19 +14,19 @@
                     <mxGeometry x="650" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="Search.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="290" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="530" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Pipeline Container.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="170" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="365" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="Deals.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="10" y="290" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="100" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="Deals.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="290" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="245" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="Deals.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="290" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="390" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="2" target="5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -40,7 +40,7 @@
                         <mxPoint x="440" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="" style="endArrow=classic;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.425;exitY=1.067;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="8" target="11" edge="1">
+                <mxCell id="15" value="" style="endArrow=classic;html=1;entryX=0.308;entryY=0.017;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="8" target="11" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="362" y="220" as="sourcePoint"/>
                         <mxPoint x="440" y="170" as="targetPoint"/>
@@ -58,25 +58,34 @@
                         <mxPoint x="440" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8" target="7" edge="1">
+                <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=0.85;exitY=1.017;exitDx=0;exitDy=0;entryX=0.15;entryY=0.017;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="8" target="7" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="390" y="220" as="sourcePoint"/>
                         <mxPoint x="420" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="20" value="" style="endArrow=classic;html=1;exitX=0.178;exitY=1.009;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="2" target="8" edge="1">
+                <mxCell id="20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="8" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="390" y="220" as="sourcePoint"/>
                         <mxPoint x="440" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="21" value="Header.js" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="370" y="170" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="220" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="" style="endArrow=classic;html=1;exitX=0.425;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.333;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="21">
+                <mxCell id="22" value="" style="endArrow=classic;html=1;exitX=0.083;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.333;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="21">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="390" y="240" as="sourcePoint"/>
                         <mxPoint x="440" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="NewDealForm.js" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.883;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8" target="23">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="300" as="sourcePoint"/>
+                        <mxPoint x="450" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>

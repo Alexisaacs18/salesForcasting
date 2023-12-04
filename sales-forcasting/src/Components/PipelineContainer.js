@@ -1,10 +1,12 @@
 import React from 'react';
 import Deals from './Deals';
 import Search from './Search';
+import NewDealForm from './NewDealForm';
 
-function PipelineContainer() {
+function PipelineContainer({ deals }) {
     return (
         <div>
+            <NewDealForm />
             <Search />
             <table className="ui celled striped padded table">
                 <tbody>
@@ -33,6 +35,9 @@ function PipelineContainer() {
                     </tr>
                 </tbody>
             </table>
+            {deals.map((deal) => (
+                <Deals key={deal.id} deal={deal} />
+            ))}
         </div>
     );
 }
