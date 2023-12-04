@@ -5,6 +5,7 @@ import Search from './Components/Search';
 import RepPage from './Components/RepPage';
 import StagePage from './Components/StagePage';
 import ClosePage from './Components/ClosePage';
+import Header from './Components/Header';
 import './App.css';
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Forecast.io</h1>
+      <Header />
       <RepPage />
       <ClosePage />
       <StagePage />
