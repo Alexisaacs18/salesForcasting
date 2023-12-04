@@ -31,7 +31,6 @@ function App() {
       <RepPage />
       <ClosePage />
       <StagePage />
-      <Header />
       <Search />
       <PipelineContainer />
     </div>
