@@ -71,9 +71,13 @@ JSON file used with json-server: db.json
 ```
 
 
-## JSON-SERVER
+## JSON-SERVER ENDPOINTS
+Homepage
+Endpoint: /reps
+HTTP Verb: GET
+Description: Retrieve information for the homepage. This could include an overview of the entire reps data.
 
-## ENDPOINTS
+## REACT ROUTES
 ```
 Homepage
 Endpoint: /
