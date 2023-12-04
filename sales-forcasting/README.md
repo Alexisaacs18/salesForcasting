@@ -102,7 +102,7 @@ Description: Retrieve information about the close stages
 
 Home Page
 Route: /
-Title: Component this goes to 
+Title: Goes in App Component
 
 Rep Page
 Route: /reps
