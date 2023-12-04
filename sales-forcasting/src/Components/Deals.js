@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+
 
 function Deals({ deal }) {
+
+    const stageUrl = "http://localhost:3001/stages"
+
+    const [stage, setStage] = useState('')
+
+    useEffect(() => {
+        fetch(`${stageUrl}/${deal.stage_id}`)
+            .then(res => res.json())
+            .then(data => setStage(data.name))
+    }, [])
 
     return (
         <div className="Deals">
@@ -23,7 +35,7 @@ function Deals({ deal }) {
                             <h3 className="ui center aligned header">{`$${deal.monthly_recurring_revenue}`}</h3>
                         </th>
                         <th>
-                            <h3 className="ui center aligned header">{deal.stage_id}</h3>
+                            <h3 className="ui center aligned header">{stage}</h3>
                         </th>
                         <th>
                             <h3 className="ui center aligned header">{deal.close}</h3>
