@@ -2,7 +2,6 @@ import React from 'react';
 
 function Deals({ deal }) {
 
-    console.log(deal)
     return (
         <div className="Deals">
             <table className="ui celled striped padded table">
@@ -21,7 +20,7 @@ function Deals({ deal }) {
                             <h3 className="ui center aligned header">{deal.users}</h3>
                         </th>
                         <th>
-                            <h3 className="ui center aligned header">{deal.monthly_recurring_revenue}</h3>
+                            <h3 className="ui center aligned header">{`$${deal.monthly_recurring_revenue}`}</h3>
                         </th>
                         <th>
                             <h3 className="ui center aligned header">{deal.stage_id}</h3>

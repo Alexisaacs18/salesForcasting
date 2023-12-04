@@ -1,9 +1,25 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
 
-function PipelineContainer({ deals }) {
+function PipelineContainer() {
+
+    const url = "http://localhost:3001/deals"
+
+    const [deals, setDeals] = useState([])
+
+    useEffect(() => {
+        getDeals()
+    }, [])
+
+    function getDeals() {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setDeals(data))
+    }
+
     return (
         <div>
             <NewDealForm />
