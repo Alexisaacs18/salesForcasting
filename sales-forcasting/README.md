@@ -72,32 +72,52 @@ JSON file used with json-server: db.json
 
 
 ## JSON-SERVER ENDPOINTS
-Homepage
+
+#### Home Page
+Endpoint: /deals
+HTTP Verb: GET
+Description: Retrieve information for all deals in the deals array
+
+Endpoint: /deals
+HTTP Verb: POST
+Description: Add a new deal to the deals array
+
+#### Reps Page
 Endpoint: /reps
 HTTP Verb: GET
-Description: Retrieve information for the homepage. This could include an overview of the entire reps data.
+Description: Retrieve information on reps
+
+#### Stage Page
+Endpoint: /stages
+HTTP Verb: GET
+Description: Retrieve a list of sales stages with information
+
+#### Close Page
+Endpoint: /closes
+HTTP Verb: GET
+Description: Retrieve information about the close stages
 
 ## REACT ROUTES
 ```
-Homepage
-Endpoint: /
-HTTP Verb: GET
-Description: Retrieve information for the homepage. This could include an overview of the entire sales pipeline.
+
+Home Page
+Route: /
+Title: Component this goes to 
 
 Rep Page
-Endpoint: /reps
-HTTP Verb: GET
-Description: Retrieve a list of sales reps with their respective information, including revenue.
+Route: /reps
+Title: Goes in the Reps Component 
 
-Stage Page
-Endpoint: /stages
-HTTP Verb: GET
-Description: Retrieve a list of sales stages with information on the revenue associated with each stage.
+Rep Page
+Route: /stages
+Title: Goes in the Stages Component 
 
-Close Page
-Endpoint: /closes
-HTTP Verb: GET
-Description: Retrieve information about the close stages, including the associated revenue.
+Rep Page
+Route: /closes
+Title: Goes in the Closes Component 
+
+
+
 
 // Homepage
 {
