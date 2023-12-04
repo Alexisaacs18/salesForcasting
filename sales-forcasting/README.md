@@ -1,10 +1,7 @@
 # SalesForcasting
 
-<img width="394" alt="Screen Shot 2023-11-13 at 3 41 54 PM" src="https://github.com/Sette94/phase-1-project-sandwhich/assets/147007475/f23ac41a-e3ad-4dd5-8516-0fddca63a0c4">
+<img width="394" alt="Screen Shot 2023-11-13 at 3 41 54 PM" src="https://github.com/Alexisaacs18/salesForcasting/blob/main/sales-forcasting/assets/SalesForcasting.PNG?raw=true">
 
-<img width="384" alt="Screen Shot 2023-11-13 at 3 42 07 PM" src="https://github.com/Sette94/phase-1-project-sandwhich/assets/147007475/9fc9dcb8-8661-430a-bc8f-33248198012f">
-
-<img width="193" alt="Screen Shot 2023-11-13 at 3 42 23 PM" src="https://github.com/Sette94/phase-1-project-sandwhich/assets/147007475/e77a0b1e-c65d-4e49-a20d-afb44558f4ab">
 
 ## Description
 
@@ -14,8 +11,7 @@ Sales forcasting tool for CROs to better forecast sales pipleine
 
 - [MVP](#MVP)
 - [API/JSON](#API/JSON)
-- [Challenges](#Challenges)
-- [Kanban](#Kanban)
+- [JSON-SERVER](#JSON-SERVER)
 
 ## MVP
 
@@ -75,5 +71,6 @@ JSON file used with json-server: db.json
 ```
 
 
+## JSON-SERVER
 
 
