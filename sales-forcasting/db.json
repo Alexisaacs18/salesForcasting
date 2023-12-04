@@ -2,7 +2,6 @@
     "homepage": {
         "message": "Welcome to the Sales Pipeline",
         "pipeline_overview": {
-            // ... overview data
         }
     },
     "deals": [
@@ -103,7 +102,6 @@
             "name": "Sean Innella",
             "mrr": 1964  
         }
-        // ... other reps
     ],
     "stages": [
         {
@@ -126,7 +124,6 @@
             "name": "Pricing Negotiation"
     
         }
-        // ... other stages
     ],
     "closed": [
         {
@@ -139,6 +136,6 @@
             "name": "Closed Lost"
     
         }
-        // ... other close stages
+    
     ]
 }
