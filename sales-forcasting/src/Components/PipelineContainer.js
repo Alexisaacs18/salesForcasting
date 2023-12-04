@@ -1,14 +1,12 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
 
 function PipelineContainer() {
-
     const url = "http://localhost:3001/deals"
-
     const [deals, setDeals] = useState([])
+    const [searchTerm, setSearchTerm] = useState('')
 
     useEffect(() => {
         fetch(url)
@@ -20,10 +18,12 @@ function PipelineContainer() {
         setDeals([...deals, newDeal])
     }
 
+    const filteredDeals = deals.filter(deal => deal.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
     return (
         <div>
             <NewDealForm url={url} newDealHandler={newDealHandler} />
-            <Search />
+            <Search setSearchTerm={setSearchTerm} />
             <table className="ui celled striped padded table">
                 <tbody>
                     <tr>
@@ -51,7 +51,7 @@ function PipelineContainer() {
                     </tr>
                 </tbody>
             </table>
-            {deals.map((deal) => (
+            {filteredDeals.map((deal) => (
                 <Deals key={deal.id} deal={deal} />
             ))}
         </div>
