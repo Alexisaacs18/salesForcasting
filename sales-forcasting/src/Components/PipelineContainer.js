@@ -3,6 +3,7 @@ import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
 
+
 function PipelineContainer() {
     const url = "http://localhost:3001/deals"
     const [deals, setDeals] = useState([])
@@ -54,6 +55,7 @@ function PipelineContainer() {
             {filteredDeals.map((deal) => (
                 <Deals key={deal.id} deal={deal} />
             ))}
+
         </div>
     );
 }
