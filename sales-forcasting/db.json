@@ -61,7 +61,7 @@
             "rep": "Sean Innella",
             "users": 5,
             "monthly_recurring_revenue": 495,
-            "stage": 2,
+            "stage_id": 4,
             "close": "12/15/23"
         },
         {
@@ -71,7 +71,7 @@
             "rep": "Nick Sette",
             "users": 7,
             "monthly_recurring_revenue": 693,
-            "stage": 1,
+            "stage_id": 1,
             "close": "12/27/23"
         },
         {
@@ -81,7 +81,7 @@
             "rep": "Alex Isaacs",
             "users": 3,
             "monthly_recurring_revenue": 249,
-            "stage": 2,
+            "stage_id": 2,
             "close": "12/6/23"
         }
     ],
@@ -99,7 +99,7 @@
         {
             "id": 3,
             "name": "Sean Innella",
-            "mrr": 1964
+            "monthly_recurring_revenue": 1964
         }
     ],
     "stages": [

@@ -7,12 +7,25 @@ import NewDealForm from './NewDealForm';
 function PipelineContainer() {
 
     const url = "http://localhost:3001/deals"
+    const stageUrl = "http://localhost:3001/stages"
+
+    const [stages, setStages] = useState([])
 
     const [deals, setDeals] = useState([])
 
     useEffect(() => {
+        getStages()
+    }, [])
+
+    useEffect(() => {
         getDeals()
     }, [])
+
+    function getStages() {
+        fetch(stageUrl)
+            .then(res => res.json())
+            .then(data => setStages(data))
+    }
 
     function getDeals() {
         fetch(url)
