@@ -73,4 +73,78 @@ JSON file used with json-server: db.json
 
 ## JSON-SERVER
 
+## ENDPOINTS
+Homepage
+Endpoint: /
+HTTP Verb: GET
+Description: Retrieve information for the homepage. This could include an overview of the entire sales pipeline.
+
+Rep Page
+Endpoint: /reps
+HTTP Verb: GET
+Description: Retrieve a list of sales reps with their respective information, including revenue.
+
+Stage Page
+Endpoint: /stages
+HTTP Verb: GET
+Description: Retrieve a list of sales stages with information on the revenue associated with each stage.
+
+Close Page
+Endpoint: /closes
+HTTP Verb: GET
+Description: Retrieve information about the close stages, including the associated revenue.
+
+// Homepage
+{
+  "data": {
+    "message": "Welcome to the Sales Pipeline",
+    "pipeline_overview": {
+      // ... overview data
+    }
+  }
+}
+
+// Rep Page
+{
+  "data": {
+    "reps": [
+      {
+        "id": 1,
+        "name": "Alex Isaacs",
+        "revenue": 2549
+      },
+      // ... other reps
+    ]
+  }
+}
+
+// Stage Page
+{
+  "data": {
+    "stages": [
+      {
+        "id": 1,
+        "name": "Prospecting",
+        "revenue": 100000
+      },
+      // ... other stages
+    ]
+  }
+}
+
+// Close Page
+{
+  "data": {
+    "closes": [
+      {
+        "id": 1,
+        "name": "Closed-Won",
+        "revenue": 75000
+      },
+      // ... other close stages
+    ]
+  }
+}
+
+
 
