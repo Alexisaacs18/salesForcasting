@@ -181,6 +181,7 @@ code {
   padding: 10px;
   border: none;
   outline: none;
+  border-radius: 8px;
 }
 
 .form button {
