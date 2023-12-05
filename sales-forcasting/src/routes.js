@@ -18,7 +18,6 @@ const routes = [
                 path: "/deal/:id",
                 element: <Deal />,
             },
-
             {
                 path: "/reps",
                 element: <RepPage />,

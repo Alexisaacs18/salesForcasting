@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import '../index.css';
 
 
 function Deals({ deal }) {
 
     const stageUrl = "http://localhost:3001/stages"
-
     const [stage, setStage] = useState('')
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`${stageUrl}/${deal.stage_id}`)
@@ -14,11 +16,18 @@ function Deals({ deal }) {
             .then(data => setStage(data.name))
     }, [])
 
+    //Link to Individual Deal
+    function individualDeal() {
+        console.log(deal)
+        navigate(`/deal/${deal.id}`)
+
+    }
+
     return (
         <div className="Deals">
             <table className="Deal">
                 <tbody>
-                    <tr className='trs'>
+                    <tr className='trs' onClick={individualDeal}>
                         <th className='tds'>
                             <h3 className="ui center aligned header">{deal.last_update}</h3>
                         </th>

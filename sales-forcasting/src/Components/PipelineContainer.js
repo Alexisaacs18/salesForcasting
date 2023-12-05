@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
-import { Outlet } from 'react-router-dom';
-
 import '../index.css';
 
 
@@ -47,6 +45,11 @@ function PipelineContainer() {
             getStageNameById(deal.stage_id).toLowerCase().includes(lowerCaseSearchTerm)
         );
     });
+
+
+
+
+
 
     return (
         <div className="Pipeline">
