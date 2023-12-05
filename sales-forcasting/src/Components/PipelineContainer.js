@@ -24,7 +24,9 @@ function PipelineContainer() {
 
     return (
         <div className="Pipeline">
-            <NewDealForm url={url} newDealHandler={newDealHandler} />
+            <div className='form'>
+                <NewDealForm url={url} newDealHandler={newDealHandler} />
+            </div>
             <Search setSearchTerm={setSearchTerm} />
             <table className='Table'>
                 <tbody>

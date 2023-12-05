@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Dropdown } from 'primereact/dropdown';
+import '../index.css';
 
 
 function NewDealForm({ url, newDealHandler }) {

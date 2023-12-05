@@ -95,11 +95,15 @@ code {
 }
 
 .Header {
+  padding-top: 1%;
+  padding-bottom: 2%;
   text-align: center;
+  background-color: rgb(187, 217, 248);
 }
 
 .Pipeline {
   text-align: center;
+  background-color: rgb(221, 237, 252);
 }
 
 .Table {
@@ -116,6 +120,24 @@ code {
   margin-right: auto;
 }
 
+.NewDealForm form {
+  display: flex;
+  justify-content: center;
+}
+
+.NewDealForm input {
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.NewDealForm button {
+  width: 150px;
+}
+
+.form {
+  padding-bottom: 1%;
+}
+
 .tr {
   border: 1px solid #ddd;
   padding: 8px;
@@ -123,7 +145,6 @@ code {
 }
 
 .th {
-  background-color: #f2f2f2;
   text-align: center;
   width: 120px;
   box-sizing: border-box;
