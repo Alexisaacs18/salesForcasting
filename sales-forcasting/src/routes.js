@@ -12,13 +12,11 @@ const routes = [
         children: [
             {
                 path: "/",
-                element: <PipelineContainer />,
-                children: [
-                    {
-                        path: "/deal/:id",
-                        element: <Deal />
-                    }
-                ]
+                element: <PipelineContainer />
+            },
+            {
+                path: "/deal/:id",
+                element: <Deal />,
             },
 
             {
