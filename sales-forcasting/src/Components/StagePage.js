@@ -17,6 +17,7 @@ function StagePage() {
 
     return (
         <div className="StagePage">
+            <h2>Pipeline Stages</h2>
             {stage.map((stage) => (
                 <h3 key={stage.id}>{`${stage.name}: Revenue`}</h3>
             ))}

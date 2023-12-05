@@ -31,6 +31,7 @@ function RepPage() {
 
     return (
         <div className="RepPage">
+            <h2>Sales Reps</h2>
             {reps.map((rep) => (
                 <h3 key={rep.id}>{`${rep.name}: $${rep.monthly_recurring_revenue}`}</h3>
             ))}

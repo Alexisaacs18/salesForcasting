@@ -161,3 +161,17 @@ code {
   width: 120px;
   box-sizing: border-box;
 }
+
+.RepPage {
+  text-align: center;
+  background-color: rgb(221, 237, 252);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.StagePage {
+  text-align: center;
+  background-color: rgb(221, 237, 252);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
