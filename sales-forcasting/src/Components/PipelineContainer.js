@@ -8,32 +8,50 @@ import '../index.css';
 
 
 function PipelineContainer() {
-    const url = "http://localhost:3001/deals"
+    const dealsUrl = "http://localhost:3001/deals"
+    const stageUrl = "http://localhost:3001/stages"
+
     const [deals, setDeals] = useState([])
+    const [stages, setStages] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
 
+
     useEffect(() => {
-        fetch(url)
+        fetch(dealsUrl)
             .then(res => res.json())
             .then(data => setDeals(data))
+    }, [])
+
+    useEffect(() => {
+        fetch(stageUrl)
+            .then(res => res.json())
+            .then(data => setStages(data))
     }, [])
 
     function newDealHandler(newDeal) {
         setDeals([...deals, newDeal])
     }
 
+
+    function getStageNameById(id) {
+        const stage = stages.find((s) => s.id === id);
+        return stage ? stage.name : "Stage not found"; // Return the name or a default message if ID is not found
+    }
+
+
     const filteredDeals = deals.filter(deal => {
         const lowerCaseSearchTerm = searchTerm.toLowerCase();
         return (
             deal.name.toLowerCase().includes(lowerCaseSearchTerm) ||
-            deal.rep.toLowerCase().includes(lowerCaseSearchTerm)
+            deal.rep.toLowerCase().includes(lowerCaseSearchTerm) ||
+            getStageNameById(deal.stage_id).toLowerCase().includes(lowerCaseSearchTerm)
         );
     });
 
     return (
         <div className="Pipeline">
             <div className='form'>
-                <NewDealForm url={url} newDealHandler={newDealHandler} />
+                <NewDealForm url={dealsUrl} newDealHandler={newDealHandler} />
                 <Search setSearchTerm={setSearchTerm} />
             </div>
             <table className='Table'>
