@@ -6,15 +6,22 @@ function Deal() {
     const location = useLocation();
     const deal = location.state; // Access the state directly
 
-    // We have the current data through deal variable 
+    const formOutline = {
+        id: deal.id,
+        last_update: deal.last_update,
+        name: deal.name,
+        rep: deal.rep,
+        users: deal.users,
+        monthly_recurring_revenue: deal.monthly_recurring_revenue,
+        close: deal.close,
+        stageInfo: {
+            stage_id: deal.stage_id
+        }
+    }
 
-    // 1) Creata a form in state 
-    const [form, setForm] = useState(deal)
+    const [form, setForm] = useState(formOutline)
     const [rep, setRep] = useState('')
     const [formStage, setFormStage] = useState([])
-    // 2) setState to begin with the deal variable info
-    // 3) onSubmit, run PATCH through deal.id to update the existing data in the DB
-    // 4) Home will re-render every time we click on it so, the infomation here will update when come back to it. 
 
     const dealsUrl = "http://localhost:3001/deals"
     const repsUrl = "http://localhost:3001/reps"
@@ -36,27 +43,24 @@ function Deal() {
         e.preventDefault()
 
         const postedData = {
+            id: form.id,
             last_update: form.last_update,
             name: form.name,
             rep: form.rep,
             users: parseInt(form.users),
             monthly_recurring_revenue: parseInt(form.monthly_recurring_revenue),
-            stage_id: form.stage_id,
+            stage_id: form.stageInfo.id,
             close: form.close,
         }
 
-        console.log(postedData)
 
-        //     fetch(dealsUrl, {
-        //         method: "PATCH",
-        //         headers: {
-        //             "content-type": "application/json"
-        //         },
-        //         body: JSON.stringify()
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //         })
+        fetch(`${dealsUrl}/${postedData.id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(postedData)
+        })
     }
 
     function getStageNameById(id) {
@@ -71,8 +75,6 @@ function Deal() {
             [e.target.name]: e.target.value
         })
     }
-
-    console.log(form.last_update)
 
     return (
         <div>
@@ -95,8 +97,8 @@ function Deal() {
                 <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
                 <label htmlFor="stage">Stage:</label>
-                <Dropdown value={form.stage_id} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                    placeholder={getStageNameById(form.stage_id)} className="w-full md:w-14rem" />
+                <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
+                    placeholder={getStageNameById(form.stageInfo.stage_id)} className="w-full md:w-14rem" />
 
                 <label htmlFor="close">Close Date:</label>
                 <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />

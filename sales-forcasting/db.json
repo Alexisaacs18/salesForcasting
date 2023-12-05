@@ -7,11 +7,11 @@
     {
       "id": 1,
       "last_update": "2023-12-06",
-      "name": "Slack-AI",
+      "name": "Slack-API",
       "rep": "Alex Isaacs",
       "users": 20,
       "monthly_recurring_revenue": 2549,
-      "stage_id": 2,
+      "stage_id": 5,
       "close": "2023-12-06"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-12",
       "name": "Outreach-AI",
       "rep": "Alex Isaacs",
       "users": 35,
