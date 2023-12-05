@@ -1,3 +1,5 @@
+/* index.css */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +13,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 
 .nav-link {
   align-items: center;
@@ -41,7 +42,6 @@ code {
   color: red;
 }
 
-
 .button-63:active,
 .button-63:hover {
   outline: 0;
@@ -53,9 +53,6 @@ code {
     max-width: 16px;
   }
 }
-
-
-
 
 /* CSS */
 .button-63 {
@@ -191,4 +188,25 @@ code {
   border: none;
   cursor: pointer;
   border-radius: 8px;
+}
+
+/* Updated styles for NewDealForm */
+
+.NewDealForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.NewDealForm input,
+.NewDealForm button,
+.NewDealForm .w-full {
+  width: 100%; /* Make all form elements full width */
+  margin-bottom: 1rem; /* Add margin between elements */
+}
+
+.NewDealForm button {
+  width: auto; /* Allow the button to take its natural width */
 }
