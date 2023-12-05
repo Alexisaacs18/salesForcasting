@@ -3,24 +3,47 @@ import { useState, useEffect } from 'react';
 
 function StagePage() {
 
-    const stagesUrl = "http://localhost:3001/stages"
+    const dealsUrl = "http://localhost:3001/deals"
+    const [dealReps, setDealReps] = useState([])
 
-    const [stage, setStage] = useState([])
 
     useEffect(() => {
-        fetch(stagesUrl)
+        fetch(dealsUrl)
             .then(res => res.json())
-            .then(data => setStage(data))
+            .then(data => setDealReps(data))
     }, [])
 
-    console.log(stage)
+
+    const totalMRRByRepArray = [];
+
+    // Iterate through the deals and sum up MRR for each rep
+    dealReps.forEach(deal => {
+        const stageId = deal.stage_id;
+        const mrr = deal.monthly_recurring_revenue;
+
+        // Check if rep already exists in the array
+        const existingRepIndex = totalMRRByRepArray.findIndex(item => item.stage_id === stageId);
+
+        if (existingRepIndex !== -1) {
+            // If rep exists, update the MRR
+            totalMRRByRepArray[existingRepIndex].mrr += mrr;
+        } else {
+            // If rep doesn't exist, add a new object to the array
+            totalMRRByRepArray.push({ stageId, mrr });
+        }
+    });
+
+    console.log(totalMRRByRepArray)
+
 
     return (
-        <div className="StagePage">
-            <h2>Pipeline Stages</h2>
-            {stage.map((stage) => (
-                <h3 key={stage.id}>{`${stage.name}: Revenue`}</h3>
+        <div className="RepPage">
+            <h2>Sales Reps</h2>
+            {totalMRRByRepArray.map((repData) => (
+                <h3 key={repData.stageId}>{`${repData.stageId}: $${repData.mrr}`}</h3>
             ))}
+
+
         </div>
     );
 }
