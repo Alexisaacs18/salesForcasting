@@ -46,11 +46,6 @@ function PipelineContainer() {
         );
     });
 
-
-
-
-
-
     return (
         <div className="Pipeline">
             <div className='form'>

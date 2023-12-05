@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-
 import '../index.css';
 
 
@@ -18,8 +17,7 @@ function Deals({ deal }) {
 
     //Link to Individual Deal
     function individualDeal() {
-        console.log(deal)
-        navigate(`/deal/${deal.id}`)
+        navigate(`/deal/${deal.id}`, { state: deal });
 
     }
 

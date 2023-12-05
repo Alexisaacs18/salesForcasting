@@ -1,12 +1,14 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Deal() {
+    const location = useLocation();
+    const deal = location.state; // Access the state directly
 
     return (
-        <div className="DealPage">
-            <h2>Deal</h2>
-
+        <div>
+            <h2>{deal.name}</h2>
+            {/* Render other deal properties as needed */}
         </div>
     );
 }
