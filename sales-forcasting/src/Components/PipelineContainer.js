@@ -30,8 +30,8 @@ function PipelineContainer() {
 
             <div className='form'>
                 <NewDealForm url={url} newDealHandler={newDealHandler} />
+                <Search setSearchTerm={setSearchTerm} />
             </div>
-            <Search setSearchTerm={setSearchTerm} />
             <table className='Table'>
                 <tbody>
                     <tr className='tr'>
