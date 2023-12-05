@@ -1,131 +1,141 @@
 {
-    "homepage": {
-        "message": "Welcome to the Sales Pipeline",
-        "pipeline_overview": {}
+  "homepage": {
+    "message": "Welcome to the Sales Pipeline",
+    "pipeline_overview": {}
+  },
+  "deals": [
+    {
+      "id": 1,
+      "last_update": "11-27-23",
+      "name": "Slack-AI",
+      "rep": "Alex Isaacs",
+      "users": 20,
+      "monthly_recurring_revenue": 2549,
+      "stage_id": 2,
+      "close": "12-24-23"
     },
-    "deals": [
-        {
-            "id": 1,
-            "last_update": "11-27-23",
-            "name": "Slack-AI",
-            "rep": "Alex Isaacs",
-            "users": 20,
-            "monthly_recurring_revenue": 2549,
-            "stage_id": 2,
-            "close": "12-24-23"
-        },
-        {
-            "id": 2,
-            "last_update": "11-29-23",
-            "name": "SalesForce-NS",
-            "rep": "Nick Sette",
-            "users": 3,
-            "monthly_recurring_revenue": 249,
-            "stage_id": 1,
-            "close": "12-11-23"
-        },
-        {
-            "id": 3,
-            "last_update": "12-1-23",
-            "name": "SalesLoft-SI",
-            "rep": "Sean Innella",
-            "users": 18,
-            "monthly_recurring_revenue": 1469,
-            "stage_id": 3,
-            "close": "12-7-23"
-        },
-        {
-            "id": 4,
-            "last_update": "11-20-23",
-            "name": "Gong-NS",
-            "rep": "Nick Sette",
-            "users": 10,
-            "monthly_recurring_revenue": 945,
-            "stage_id": 2,
-            "close": "12-20-23"
-        },
-        {
-            "id": 5,
-            "last_update": "12-4-23",
-            "name": "Outreach-AI",
-            "rep": "Alex Isaacs",
-            "users": 35,
-            "monthly_recurring_revenue": 3500,
-            "stage_id": 3,
-            "close": "12-8-23"
-        },
-        {
-            "id": 6,
-            "last_update": "12-3-23",
-            "name": "SalesForce-SI",
-            "rep": "Sean Innella",
-            "users": 5,
-            "monthly_recurring_revenue": 495,
-            "stage_id": 4,
-            "close": "12-15-23"
-        },
-        {
-            "id": 7,
-            "last_update": "12-3-23",
-            "name": "Lavender-NS",
-            "rep": "Nick Sette",
-            "users": 7,
-            "monthly_recurring_revenue": 693,
-            "stage_id": 1,
-            "close": "12-27-23"
-        },
-        {
-            "id": 8,
-            "last_update": "12-3-23",
-            "name": "Trellus-AI",
-            "rep": "Alex Isaacs",
-            "users": 3,
-            "monthly_recurring_revenue": 249,
-            "stage_id": 2,
-            "close": "12-6-23"
-        }
-    ],
-    "reps": [
-        {
-            "id": 1,
-            "name": "Alex Isaacs",
-            "monthly_recurring_revenue": 2549
-        },
-        {
-            "id": 2,
-            "name": "Nick Sette",
-            "monthly_recurring_revenue": 249
-        },
-        {
-            "id": 3,
-            "name": "Sean Innella",
-            "monthly_recurring_revenue": 1964
-        }
-    ],
-    "stages": [
-        {
-            "id": 1,
-            "name": "Demo Complete"
-        },
-        {
-            "id": 2,
-            "name": "Evaluation"
-        },
-        {
-            "id": 3,
-            "name": "Approval"
-        },
-        {
-            "id": 4,
-            "name": "Pricing Negotiation"
-        },
-        {
-            "id": 5,
-            "name": "Closed Won"
-        },
-        {
-            "id": 6,
-            "name": "Closed Lost"
-        }
-    ]
+    {
+      "id": 2,
+      "last_update": "11-29-23",
+      "name": "SalesForce-NS",
+      "rep": "Nick Sette",
+      "users": 3,
+      "monthly_recurring_revenue": 249,
+      "stage_id": 1,
+      "close": "12-11-23"
+    },
+    {
+      "id": 3,
+      "last_update": "12-1-23",
+      "name": "SalesLoft-SI",
+      "rep": "Sean Innella",
+      "users": 18,
+      "monthly_recurring_revenue": 1469,
+      "stage_id": 3,
+      "close": "12-7-23"
+    },
+    {
+      "id": 4,
+      "last_update": "11-20-23",
+      "name": "Gong-NS",
+      "rep": "Nick Sette",
+      "users": 10,
+      "monthly_recurring_revenue": 945,
+      "stage_id": 2,
+      "close": "12-20-23"
+    },
+    {
+      "id": 5,
+      "last_update": "12-4-23",
+      "name": "Outreach-AI",
+      "rep": "Alex Isaacs",
+      "users": 35,
+      "monthly_recurring_revenue": 3500,
+      "stage_id": 3,
+      "close": "12-8-23"
+    },
+    {
+      "id": 6,
+      "last_update": "12-3-23",
+      "name": "SalesForce-SI",
+      "rep": "Sean Innella",
+      "users": 5,
+      "monthly_recurring_revenue": 495,
+      "stage_id": 4,
+      "close": "12-15-23"
+    },
+    {
+      "id": 7,
+      "last_update": "12-3-23",
+      "name": "Lavender-NS",
+      "rep": "Nick Sette",
+      "users": 7,
+      "monthly_recurring_revenue": 693,
+      "stage_id": 1,
+      "close": "12-27-23"
+    },
+    {
+      "id": 8,
+      "last_update": "12-3-23",
+      "name": "Trellus-AI",
+      "rep": "Alex Isaacs",
+      "users": 3,
+      "monthly_recurring_revenue": 249,
+      "stage_id": 2,
+      "close": "12-6-23"
+    },
+    {
+      "last_update": "2023-12-06",
+      "name": "Apollo-NS",
+      "rep": "Nick Sette",
+      "users": 15,
+      "monthly_recurring_revenue": 4500,
+      "stage_id": 5,
+      "close": "2023-12-06",
+      "id": 9
+    }
+  ],
+  "reps": [
+    {
+      "id": 1,
+      "name": "Alex Isaacs",
+      "monthly_recurring_revenue": 2549
+    },
+    {
+      "id": 2,
+      "name": "Nick Sette",
+      "monthly_recurring_revenue": 249
+    },
+    {
+      "id": 3,
+      "name": "Sean Innella",
+      "monthly_recurring_revenue": 1964
+    }
+  ],
+  "stages": [
+    {
+      "id": 1,
+      "name": "Demo Complete"
+    },
+    {
+      "id": 2,
+      "name": "Evaluation"
+    },
+    {
+      "id": 3,
+      "name": "Approval"
+    },
+    {
+      "id": 4,
+      "name": "Pricing Negotiation"
+    },
+    {
+      "id": 5,
+      "name": "Closed Won"
+    },
+    {
+      "id": 6,
+      "name": "Closed Lost"
+    }
+  ]
 }
