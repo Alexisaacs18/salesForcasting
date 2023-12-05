@@ -93,3 +93,50 @@ code {
     min-width: 196px;
   }
 }
+
+.Header {
+  text-align: center;
+}
+
+.Pipeline {
+  text-align: center;
+}
+
+.Table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Deal {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tr {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.th {
+  background-color: #f2f2f2;
+  text-align: center;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+.trs {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tds {
+  text-align: center;
+  width: 120px;
+  box-sizing: border-box;
+}

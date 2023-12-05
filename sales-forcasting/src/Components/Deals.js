@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../index.css';
 
 
 function Deals({ deal }) {
@@ -16,28 +16,28 @@ function Deals({ deal }) {
 
     return (
         <div className="Deals">
-            <table className="ui celled striped padded table">
+            <table className="Deal">
                 <tbody>
-                    <tr>
-                        <th>
+                    <tr className='trs'>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{deal.last_update}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{deal.name}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{deal.rep}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{deal.users}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{`$${deal.monthly_recurring_revenue}`}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{stage}</h3>
                         </th>
-                        <th>
+                        <th className='tds'>
                             <h3 className="ui center aligned header">{deal.close}</h3>
                         </th>
                     </tr>

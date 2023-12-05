@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
+import '../index.css';
 
 
 function PipelineContainer() {
@@ -22,31 +23,31 @@ function PipelineContainer() {
     const filteredDeals = deals.filter(deal => deal.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
     return (
-        <div>
+        <div className="Pipeline">
             <NewDealForm url={url} newDealHandler={newDealHandler} />
             <Search setSearchTerm={setSearchTerm} />
-            <table className="ui celled striped padded table">
+            <table className='Table'>
                 <tbody>
-                    <tr>
-                        <th>
+                    <tr className='tr'>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Date</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Name</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Rep</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Users</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">MRR</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Stage</h3>
                         </th>
-                        <th>
+                        <th className='th'>
                             <h3 className="ui center aligned header">Close Date</h3>
                         </th>
                     </tr>

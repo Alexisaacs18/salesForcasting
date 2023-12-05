@@ -83,16 +83,6 @@
             "monthly_recurring_revenue": 249,
             "stage_id": 2,
             "close": "12-6-23"
-        },
-        {
-            "last_update": "2023-12-13",
-            "name": "newDeal",
-            "rep": "Nick Sette",
-            "users": 10,
-            "monthly_recurring_revenue": 1900,
-            "stage_id": 3,
-            "close": "2023-12-14",
-            "id": 9
         }
     ],
     "reps": [
