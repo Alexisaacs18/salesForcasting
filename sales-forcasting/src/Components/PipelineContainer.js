@@ -22,49 +22,52 @@ function PipelineContainer() {
         setDeals([...deals, newDeal])
     }
 
-    const filteredDeals = deals.filter(deal => deal.name.toLowerCase().includes(searchTerm.toLowerCase()))
-
-    return (
+    const filteredDeals = deals.filter(deal => {
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        return (
+          deal.name.toLowerCase().includes(lowerCaseSearchTerm) ||
+          deal.rep.toLowerCase().includes(lowerCaseSearchTerm)
+        );
+      });
+    
+      return (
         <div className="Pipeline">
-            <Outlet />
-
-            <div className='form'>
-                <NewDealForm url={url} newDealHandler={newDealHandler} />
-                <Search setSearchTerm={setSearchTerm} />
-            </div>
-            <table className='Table'>
-                <tbody>
-                    <tr className='tr'>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Date</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Name</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Rep</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Users</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">MRR</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Stage</h3>
-                        </th>
-                        <th className='th'>
-                            <h3 className="ui center aligned header">Close Date</h3>
-                        </th>
-                    </tr>
-                </tbody>
-            </table>
-            {filteredDeals.map((deal) => (
-                <Deals key={deal.id} deal={deal} />
-            ))}
-
+          <div className='form'>
+            <NewDealForm url={url} newDealHandler={newDealHandler} />
+          </div>
+          <Search setSearchTerm={setSearchTerm} />
+          <table className='Table'>
+            <tbody>
+              <tr className='tr'>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Date</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Name</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Rep</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Users</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">MRR</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Stage</h3>
+                </th>
+                <th className='th'>
+                  <h3 className="ui center aligned header">Close Date</h3>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          {filteredDeals.map((deal) => (
+            <Deals key={deal.id} deal={deal} />
+          ))}
         </div>
-    );
-}
-
-export default PipelineContainer;
+      );
+    }
+    
+    export default PipelineContainer;
