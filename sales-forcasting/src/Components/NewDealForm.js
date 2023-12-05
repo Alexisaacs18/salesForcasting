@@ -82,7 +82,7 @@ function NewDealForm({ url, newDealHandler }) {
 
     return (
         <div className="NewDealForm">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='form'>
                 <input onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                 <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
