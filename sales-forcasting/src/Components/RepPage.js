@@ -16,19 +16,15 @@ function RepPage() {
 
     const totalMRRByRepArray = [];
 
-    // Iterate through the deals and sum up MRR for each rep
     dealReps.forEach(deal => {
         const rep = deal.rep;
         const mrr = deal.monthly_recurring_revenue;
 
-        // Check if rep already exists in the array
         const existingRepIndex = totalMRRByRepArray.findIndex(item => item.rep === rep);
 
         if (existingRepIndex !== -1) {
-            // If rep exists, update the MRR
             totalMRRByRepArray[existingRepIndex].mrr += mrr;
         } else {
-            // If rep doesn't exist, add a new object to the array
             totalMRRByRepArray.push({ rep, mrr });
         }
     });
