@@ -12,7 +12,14 @@ const routes = [
             {
                 path: "/",
                 element: <PipelineContainer />,
+                children: [
+                    {
+                        path: "/profile/:id",
+                        element: <UserProfile />
+                    }
+                ]
             },
+
             {
                 path: "/reps",
                 element: <RepPage />,
