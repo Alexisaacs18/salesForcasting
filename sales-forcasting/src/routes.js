@@ -3,6 +3,7 @@ import App from "./App";
 import PipelineContainer from "./Components/PipelineContainer";
 import RepPage from "./Components/RepPage";
 import StagePage from "./Components/StagePage";
+import Deal from "./Components/Deal";
 
 const routes = [
     {
@@ -14,8 +15,8 @@ const routes = [
                 element: <PipelineContainer />,
                 children: [
                     {
-                        path: "/profile/:id",
-                        element: <UserProfile />
+                        path: "/deal/:id",
+                        element: <Deal />
                     }
                 ]
             },

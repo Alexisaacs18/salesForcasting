@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Deals from './Deals';
 import Search from './Search';
 import NewDealForm from './NewDealForm';
+import { Outlet } from 'react-router-dom';
+
 import '../index.css';
 
 
@@ -24,6 +26,8 @@ function PipelineContainer() {
 
     return (
         <div className="Pipeline">
+            <Outlet />
+
             <div className='form'>
                 <NewDealForm url={url} newDealHandler={newDealHandler} />
             </div>
