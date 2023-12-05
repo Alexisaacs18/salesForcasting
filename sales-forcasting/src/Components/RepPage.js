@@ -33,9 +33,6 @@ function RepPage() {
         }
     });
 
-    console.log(totalMRRByRepArray)
-
-
     return (
         <div className="RepPage">
             <h2>Sales Reps</h2>
