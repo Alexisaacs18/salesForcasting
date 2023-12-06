@@ -2,8 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 import Collapsible from 'react-collapsible';
-
 import '../index.css';
+
+import Select from 'react-select';
+
 
 
 function NewDealForm({ url, newDealHandler }) {
@@ -82,16 +84,11 @@ function NewDealForm({ url, newDealHandler }) {
     // <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" 
     // placeholder="Select a City" className="w-full md:w-14rem" />
 
-    const [newDealButton, setnewDealButton] = useState(false)
 
-    function newDealButtonHanlder(e) {
-        setnewDealButton((prev) => !prev)
-        //reset animation
-    }
 
     return (
         <div className="NewDealForm">
-            <Collapsible trigger={<button className="btn-23" onClick={newDealButtonHanlder}>
+            <Collapsible trigger={<button className="btn-23">
                 <span class="marquee" aria-hidden>Add Deal</span></button>}>
 
                 <form onSubmit={handleSubmit} className='form'>
@@ -99,7 +96,7 @@ function NewDealForm({ url, newDealHandler }) {
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
                     <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
-                        placeholder="Select a Rep" className="custom-dropdown" />
+                        placeholder="Select a Rep" className="w-full md:w-14rem" />
 
                     <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />

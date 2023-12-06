@@ -220,25 +220,27 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  /* Adjust the width as needed */
+  width: 80%;
+  max-width: 400px;
+  /* Adjust the max-width as needed */
   margin: 0 auto;
-  /* Center the form horizontally */
 }
 
 .NewDealForm input,
 .NewDealForm button,
-.NewDealForm .w-full {
+.NewDealForm {
   width: 100%;
-  /* Make all form elements full width */
   margin-bottom: 1rem;
-  /* Add margin between elements */
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 50;
 }
 
 .NewDealForm button {
   width: auto;
   /* Allow the button to take its natural width */
 }
+
 
 
 
