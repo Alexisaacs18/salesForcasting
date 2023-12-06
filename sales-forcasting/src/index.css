@@ -95,24 +95,32 @@ code {
   padding-top: 1%;
   padding-bottom: 2%;
   text-align: center;
-  background-color: rgb(187, 217, 248);
+  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-size: cover;
+
 }
 
 .Pipeline {
   text-align: center;
-  background-color: rgb(221, 237, 252);
+  background-color: rgb(187, 217, 248);
+  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-size: cover;
+
+
 }
 
 .Table {
   margin: 0 auto;
   border-collapse: collapse;
-  width: 100%;
+  width: 75%;
+  background-color: rgb(187, 217, 248);
+
 }
 
 .Deal {
   margin: 0 auto;
   border-collapse: collapse;
-  width: 100%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
