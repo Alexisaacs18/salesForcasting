@@ -347,4 +347,9 @@ code {
   }
 }
 
-.p-dropdown-items {}
+
+
+
+.dropdown-open {
+  margin-bottom: 120px; /* adjust as needed */
+}
