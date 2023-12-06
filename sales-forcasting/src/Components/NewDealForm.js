@@ -4,8 +4,6 @@ import { Dropdown } from 'primereact/dropdown';
 import Collapsible from 'react-collapsible';
 import '../index.css';
 
-import Select from 'react-select';
-
 
 
 function NewDealForm({ url, newDealHandler }) {
