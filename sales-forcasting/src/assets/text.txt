@@ -1,0 +1,8 @@
+
+
+1- KanBan
+2- Create react tree
+3- Update JSON Endpoints
+4- Update React Routes
+5- Update DB.JSON
+6- Add a POST call to our JSON Endpoints 
