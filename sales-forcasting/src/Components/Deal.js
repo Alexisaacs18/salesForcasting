@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Dropdown } from 'primereact/dropdown';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
 function Deal() {
     const location = useLocation();
@@ -14,14 +14,12 @@ function Deal() {
         users: deal.users,
         monthly_recurring_revenue: deal.monthly_recurring_revenue,
         close: deal.close,
-        stageInfo: {
-            stage_id: deal.stage_id
-        }
+        stage_id: deal.stage_id
     }
 
     const [form, setForm] = useState(formOutline)
-    const [rep, setRep] = useState('')
     const [formStage, setFormStage] = useState([])
+    const [rep, setRep] = useState([])
 
     const dealsUrl = "http://localhost:3001/deals"
     const repsUrl = "http://localhost:3001/reps"
@@ -49,9 +47,11 @@ function Deal() {
             rep: form.rep,
             users: parseInt(form.users),
             monthly_recurring_revenue: parseInt(form.monthly_recurring_revenue),
-            stage_id: form.stageInfo.id,
+            stage_id: form.stage_id,
             close: form.close,
         }
+
+        console.log(postedData)
 
 
         fetch(`${dealsUrl}/${postedData.id}`, {
@@ -60,7 +60,10 @@ function Deal() {
                 "content-type": "application/json"
             },
             body: JSON.stringify(postedData)
-        })
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
     }
 
     function getStageNameById(id) {
@@ -74,6 +77,20 @@ function Deal() {
             ...form,
             [e.target.name]: e.target.value
         })
+    }
+
+    function handleRepChange(e) {
+        setForm({
+            ...form,
+            ["rep"]: e
+        });
+    }
+
+    function handleStageChange(e) {
+        setForm({
+            ...form,
+            ["stage_id"]: e
+        });
     }
 
     return (
@@ -90,8 +107,23 @@ function Deal() {
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
                     <label htmlFor="rep">Rep:</label>
-                    <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
-                        placeholder={form.rep} className="w-full md:w-14rem" />
+
+                    <ToggleButtonGroup
+                        type="radio"
+                        name="rep"
+                        value={form.rep}
+                        onChange={handleRepChange}
+                    >
+                        {rep.map((repOption) => (
+                            <ToggleButton
+                                key={repOption.id}  // Make sure each option has a unique key
+                                value={repOption.name}  // Use the appropriate property from your 'rep' array
+                                variant="light"  // You can customize the appearance by changing the variant
+                            >
+                                {repOption.name}
+                            </ToggleButton>
+                        ))}
+                    </ToggleButtonGroup>
 
                     <label htmlFor="users">Users:</label>
                     <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
@@ -100,8 +132,22 @@ function Deal() {
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
                     <label htmlFor="stage">Stage:</label>
-                    <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                        placeholder={getStageNameById(form.stageInfo.stage_id)} className="w-full md:w-14rem" />
+                    <ToggleButtonGroup
+                        type="radio"
+                        name="stage"
+                        value={form.formStage}
+                        onChange={handleStageChange}
+                    >
+                        {formStage.map((repOption) => (
+                            <ToggleButton
+                                key={repOption.id}  // Make sure each option has a unique key
+                                value={repOption.id}  // Use the appropriate property from your 'rep' array
+                                variant="light"  // You can customize the appearance by changing the variant
+                            >
+                                {repOption.name}
+                            </ToggleButton>
+                        ))}
+                    </ToggleButtonGroup>
 
                     <label htmlFor="close">Close Date:</label>
                     <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />

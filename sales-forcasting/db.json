@@ -113,6 +113,16 @@
       "stage_id": 1,
       "close": "2023-12-05",
       "id": 11
+    },
+    {
+      "last_update": "2023-12-21",
+      "name": "Reformat",
+      "rep": "Nick Sette",
+      "users": 15,
+      "monthly_recurring_revenue": 23,
+      "stage_id": 2,
+      "close": "2023-12-07",
+      "id": 12
     }
   ],
   "reps": [

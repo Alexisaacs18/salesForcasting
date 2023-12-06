@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Dropdown } from 'primereact/dropdown';
 import Collapsible from 'react-collapsible';
 import '../index.css';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
 
 
@@ -14,8 +14,8 @@ function NewDealForm({ url, newDealHandler }) {
     const stageUrl = "http://localhost:3001/stages"
     const repsUrl = "http://localhost:3001/reps"
 
-    const [formStage, setFormStage] = useState('')
-    const [rep, setRep] = useState('')
+    const [formStage, setFormStage] = useState([])
+    const [rep, setRep] = useState([])
 
 
 
@@ -38,10 +38,10 @@ function NewDealForm({ url, newDealHandler }) {
         const postedData = {
             last_update: form.last_update,
             name: form.name,
-            rep: form.rep.name,
+            rep: form.rep,
             users: parseInt(form.users),
             monthly_recurring_revenue: parseInt(form.monthly_recurring_revenue),
-            stage_id: form.stageInfo.id,
+            stage_id: form.stage_id,
             close: form.close,
         }
 
@@ -67,8 +67,7 @@ function NewDealForm({ url, newDealHandler }) {
         users: 0,
         monthly_recurring_revenue: 0,
         close: '',
-        stageInfo: {
-        }
+        stage_id: ''
     }
 
     //When doing the post call, parse id from stageInfo 
@@ -79,20 +78,24 @@ function NewDealForm({ url, newDealHandler }) {
         setForm({
             ...form,
             [e.target.name]: e.target.value
-        })
+        });
     }
 
-
-
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    function dropdownHandler(e) {
-        console.log("Change my state")
-        setDropdownOpen((prev) => !prev)
-
+    function handleRepChange(e) {
+        setForm({
+            ...form,
+            ["rep"]: e
+        });
     }
 
+    function handleStageChange(e) {
+        setForm({
+            ...form,
+            ["stage_id"]: e
+        });
+    }
 
+    console.log(form)
 
     return (
         <div className="NewDealForm">
@@ -103,14 +106,46 @@ function NewDealForm({ url, newDealHandler }) {
                     <input className="form-element" onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                     <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                    <Dropdown className={`form-element ${dropdownOpen ? 'dropdown-open' : ''}`} value={form.rep} name="rep" onChange={handleChange}
-                        options={rep} optionLabel="name" placeholder="Select a Rep" onFocus={() => setDropdownOpen(true)} onFocusOut={() => setDropdownOpen(false)} onBlur={() => setDropdownOpen(false)} />
+                    <ToggleButtonGroup
+                        type="radio"
+                        name="rep"
+                        value={form.rep}
+                        onChange={handleRepChange}
+                    >
+                        {rep.map((repOption) => (
+                            <ToggleButton
+                                key={repOption.id}  // Make sure each option has a unique key
+                                value={repOption.name}  // Use the appropriate property from your 'rep' array
+                                variant="light"  // You can customize the appearance by changing the variant
+                            >
+                                {repOption.name}
+                            </ToggleButton>
+                        ))}
+                    </ToggleButtonGroup>
 
                     <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                     <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
-
+                    {/* 
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                        placeholder="Select a Stage" className="form-element" />
+                        placeholder="Select a Stage" className="form-element" /> */}
+
+
+                    <ToggleButtonGroup
+                        type="radio"
+                        name="stage"
+                        value={form.formStage}
+                        onChange={handleStageChange}
+                    >
+                        {formStage.map((repOption) => (
+                            <ToggleButton
+                                key={repOption.id}  // Make sure each option has a unique key
+                                value={repOption.id}  // Use the appropriate property from your 'rep' array
+                                variant="light"  // You can customize the appearance by changing the variant
+                            >
+                                {repOption.name}
+                            </ToggleButton>
+                        ))}
+                    </ToggleButtonGroup>
 
                     <input className="form-element" onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
                     <button className="formButton" type="submit">Submit Deal</button>
