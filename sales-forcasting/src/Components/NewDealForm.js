@@ -16,7 +16,7 @@ function NewDealForm({ url, newDealHandler }) {
 
     const [formStage, setFormStage] = useState('')
     const [rep, setRep] = useState('')
-    
+
 
 
     useEffect(() => {
@@ -86,6 +86,12 @@ function NewDealForm({ url, newDealHandler }) {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    function dropdownHandler(e) {
+        console.log("Change my state")
+        setDropdownOpen((prev) => !prev)
+
+    }
+
 
 
     return (
@@ -97,8 +103,8 @@ function NewDealForm({ url, newDealHandler }) {
                     <input className="form-element" onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                     <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                    <Dropdown className={`form-element ${dropdownOpen ? 'dropdown-open' : ''}`} value={form.rep} name="rep" onChange={handleChange} 
-                    options={rep} optionLabel="name" placeholder="Select a Rep" onClick={() => setDropdownOpen(true)} onBlur={() => setDropdownOpen(false)} />
+                    <Dropdown className={`form-element ${dropdownOpen ? 'dropdown-open' : ''}`} value={form.rep} name="rep" onChange={handleChange}
+                        options={rep} optionLabel="name" placeholder="Select a Rep" onFocus={() => setDropdownOpen(true)} onFocusOut={() => setDropdownOpen(false)} onBlur={() => setDropdownOpen(false)} />
 
                     <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                     <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
