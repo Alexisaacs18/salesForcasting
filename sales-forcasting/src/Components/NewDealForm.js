@@ -106,7 +106,7 @@ function NewDealForm({ url, newDealHandler }) {
                     <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
                     <div className="button-text">
-                        <p>Choose an rep:</p>
+                        <p>Choose a rep:</p>
                     </div>
                     <ToggleButtonGroup
                         type="radio"
@@ -133,7 +133,7 @@ function NewDealForm({ url, newDealHandler }) {
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
                         placeholder="Select a Stage" className="form-element" /> */}
 
-
+                    <p>Select Stage of Sale</p>
                     <ToggleButtonGroup
                         type="radio"
                         name="stage"
