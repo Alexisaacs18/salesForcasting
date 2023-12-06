@@ -192,24 +192,23 @@ code {
 
 /* Updated styles for NewDealForm */
 
-.NewDealForm form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  /* Adjust the width as needed */
-  margin: 0 auto;
-  /* Center the form horizontally */
-}
 
 .NewDealForm input,
 .NewDealForm button,
-.NewDealForm .w-full {
+.NewDealForm .r-full {
   width: 100%;
   /* Make all form elements full width */
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   /* Add margin between elements */
 }
+
+.NewDealForm .f-full {
+  width: 100%;
+  /* Make all form elements full width */
+  margin-bottom: 9rem;
+  /* Add margin between elements */
+}
+
 
 .NewDealForm button {
   width: auto;
@@ -222,7 +221,6 @@ code {
   align-items: center;
   width: 80%;
   max-width: 400px;
-  /* Adjust the max-width as needed */
   margin: 0 auto;
 }
 
@@ -240,7 +238,6 @@ code {
   width: auto;
   /* Allow the button to take its natural width */
 }
-
 
 
 

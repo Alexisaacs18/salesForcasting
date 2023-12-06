@@ -18,6 +18,9 @@ function NewDealForm({ url, newDealHandler }) {
 
     const [formStage, setFormStage] = useState('')
     const [rep, setRep] = useState('')
+    const [favorite, setFavorite] = useState(false)
+
+
 
     useEffect(() => {
         fetch(stageUrl)
@@ -30,6 +33,7 @@ function NewDealForm({ url, newDealHandler }) {
             .then(res => res.json())
             .then(data => setRep(data))
     }, [])
+
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -81,31 +85,38 @@ function NewDealForm({ url, newDealHandler }) {
         })
     }
 
-    // <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" 
-    // placeholder="Select a City" className="w-full md:w-14rem" />
+
+
+    function clickFavorite(e) {
+        e.preventDefault()
+        console.log("clickFavorite called");
+        setFavorite((prev) => !prev);
+    }
+
 
 
 
     return (
         <div className="NewDealForm">
             <Collapsible trigger={<button className="btn-23">
-                <span class="marquee" aria-hidden>Add Deal</span></button>}>
+                <span className="marquee" aria-hidden>Add Deal</span></button>}>
 
                 <form onSubmit={handleSubmit} className='form'>
                     <input onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                    <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
-                        placeholder="Select a Rep" className="w-full md:w-14rem" />
+                    <Dropdown value={form.rep} name="rep" onChange={handleChange} onClick={clickFavorite} options={rep} optionLabel="name"
+                        placeholder="Select a Rep" className={favorite ? "r-full md:w-14rem" : ""}
+                    />
 
-                    <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
+                    <input className='bump' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                        placeholder="Select a Stage" className="w-full md:w-14rem" />
+                        placeholder="Select a Stage" className="f-full md:w-14rem" />
 
                     <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
-                    <button class="formButton" type="submit">Submit Deal</button>
+                    <button className="formButton" type="submit">Submit Deal</button>
                 </form>
             </Collapsible>
 
