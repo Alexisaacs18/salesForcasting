@@ -105,9 +105,9 @@ function NewDealForm({ url, newDealHandler }) {
                     <input onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                    <Dropdown value={form.rep} name="rep" onChange={handleChange} onClick={clickFavorite} options={rep} optionLabel="name"
-                        placeholder="Select a Rep" className={favorite ? "r-full md:w-14rem" : ""}
-                    />
+                    <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
+                        placeholder="Select a Rep" className="r-full md:w-14rem" />
+
 
                     <input className='bump' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
