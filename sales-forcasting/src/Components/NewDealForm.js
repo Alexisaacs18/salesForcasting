@@ -64,8 +64,8 @@ function NewDealForm({ url, newDealHandler }) {
         last_update: '',
         name: '',
         rep: '',
-        users: null,
-        monthly_recurring_revenue: null,
+        users: 0,
+        monthly_recurring_revenue: 0,
         close: '',
         stage_id: ''
     }
@@ -95,36 +95,40 @@ function NewDealForm({ url, newDealHandler }) {
         });
     }
 
-    console.log(form)
 
     return (
         <div className="NewDealForm">
             <Collapsible trigger={<button className="btn-23">
                 <span className="marquee" aria-hidden>Add Deal</span></button>}>
 
-                <form onSubmit={handleSubmit} className=''>
+                <form onSubmit={handleSubmit} >
                     <input className="form-element" onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
-                    <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Deal Name" />
+                    <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
+                    <div className="button-text">
+                        <p>Choose an rep:</p>
+                    </div>
                     <ToggleButtonGroup
                         type="radio"
                         name="rep"
                         value={form.rep}
                         onChange={handleRepChange}
+                        style={{ display: 'flex', flexDirection: 'row', lineHeight: '1em', margin: 0, padding: 0 }}
+
                     >
                         {rep.map((repOption) => (
                             <ToggleButton
-                                key={repOption.id}  // Make sure each option has a unique key
-                                value={repOption.name}  // Use the appropriate property from your 'rep' array
-                                variant="light"  // You can customize the appearance by changing the variant
+                                key={repOption.id}
+                                value={repOption.name}
+                                variant="dark"
                             >
                                 {repOption.name}
                             </ToggleButton>
                         ))}
                     </ToggleButtonGroup>
 
-                    <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Amount of Users" step="1" />
-                    <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="Monthly Recurring Revenue" step="1" />
+                    <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
+                    <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
                     {/* 
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
                         placeholder="Select a Stage" className="form-element" /> */}
@@ -135,6 +139,8 @@ function NewDealForm({ url, newDealHandler }) {
                         name="stage"
                         value={form.formStage}
                         onChange={handleStageChange}
+                        style={{ display: 'flex', flexDirection: 'row' }}
+
                     >
                         {formStage.map((repOption) => (
                             <ToggleButton
@@ -152,7 +158,7 @@ function NewDealForm({ url, newDealHandler }) {
                 </form>
             </Collapsible>
 
-        </div>
+        </div >
     );
 }
 

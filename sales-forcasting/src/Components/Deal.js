@@ -106,7 +106,7 @@ function Deal() {
                     <label htmlFor="name">Deal Name:</label>
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                    <label htmlFor="rep">Rep:</label>
+                    <label htmlFor="rep"></label>
 
                     <ToggleButtonGroup
                         type="radio"
@@ -131,7 +131,7 @@ function Deal() {
                     <label htmlFor="monthly_recurring_revenue">Monthly Reacurring Revenue:</label>
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
-                    <label htmlFor="stage">Stage:</label>
+                    <label htmlFor="stage"></label>
                     <ToggleButtonGroup
                         type="radio"
                         name="stage"
