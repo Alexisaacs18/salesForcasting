@@ -107,13 +107,18 @@ function Deal() {
                     <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
                     <label htmlFor="rep"></label>
-
+                    <div>
+                        <p>Select a Rep:</p>
+                    </div>
                     <ToggleButtonGroup
                         type="radio"
                         name="rep"
                         value={form.rep}
                         onChange={handleRepChange}
+                        style={{ display: 'flex', flexDirection: 'row', lineHeight: '1em', margin: 0, padding: 0 }}
+
                     >
+
                         {rep.map((repOption) => (
                             <ToggleButton
                                 key={repOption.id}  // Make sure each option has a unique key
@@ -132,11 +137,16 @@ function Deal() {
                     <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
                     <label htmlFor="stage"></label>
+                    <div>
+                        <p>Select a Stage:</p>
+                    </div>
                     <ToggleButtonGroup
                         type="radio"
                         name="stage"
                         value={form.formStage}
                         onChange={handleStageChange}
+                        style={{ display: 'flex', flexDirection: 'row', lineHeight: '1em', margin: 0, padding: 0 }}
+
                     >
                         {formStage.map((repOption) => (
                             <ToggleButton

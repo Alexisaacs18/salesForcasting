@@ -144,7 +144,7 @@ function NewDealForm({ url, newDealHandler }) {
                         name="stage"
                         value={form.formStage}
                         onChange={handleStageChange}
-                        style={{ display: 'flex', flexDirection: 'row' }}
+                        style={{ display: 'flex', flexDirection: 'row', lineHeight: '1em', margin: 0, padding: 0 }}
 
                     >
                         {formStage.map((repOption) => (
