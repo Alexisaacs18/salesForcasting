@@ -77,35 +77,40 @@ function Deal() {
     }
 
     return (
-        <div>
-            <h2>{deal.name}</h2>
-            <form onSubmit={handleSubmit} className='form'>
-                <label htmlFor="last_update">Last Update:</label>
-                <input onChange={handleChange} value={form.last_update} type="date" name="last_update" defaultValue={form.last_update} />
+        <div className='Pipeline'>
 
-                <label htmlFor="name">Deal Name:</label>
-                <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
+            <div className="NewDealForm">
+                <h2>{deal.name}</h2>
 
-                <label htmlFor="rep">Rep:</label>
-                <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
-                    placeholder={form.rep} className="w-full md:w-14rem" />
+                <form onSubmit={handleSubmit} className='form'>
+                    <label htmlFor="last_update">Last Update:</label>
+                    <input onChange={handleChange} value={form.last_update} type="date" name="last_update" defaultValue={form.last_update} />
 
-                <label htmlFor="users">Users:</label>
-                <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
+                    <label htmlFor="name">Deal Name:</label>
+                    <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
-                <label htmlFor="monthly_recurring_revenue">Monthly Reacurring Revenue:</label>
-                <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
+                    <label htmlFor="rep">Rep:</label>
+                    <Dropdown value={form.rep} name="rep" onChange={handleChange} options={rep} optionLabel="name"
+                        placeholder={form.rep} className="w-full md:w-14rem" />
 
-                <label htmlFor="stage">Stage:</label>
-                <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                    placeholder={getStageNameById(form.stageInfo.stage_id)} className="w-full md:w-14rem" />
+                    <label htmlFor="users">Users:</label>
+                    <input onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
 
-                <label htmlFor="close">Close Date:</label>
-                <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
+                    <label htmlFor="monthly_recurring_revenue">Monthly Reacurring Revenue:</label>
+                    <input onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
 
-                <button type="submit">Update Deal</button>
-            </form>
+                    <label htmlFor="stage">Stage:</label>
+                    <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
+                        placeholder={getStageNameById(form.stageInfo.stage_id)} className="w-full md:w-14rem" />
+
+                    <label htmlFor="close">Close Date:</label>
+                    <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
+
+                    <button type="submit">Update Deal</button>
+                </form>
+            </div>
         </div>
+
     );
 }
 
