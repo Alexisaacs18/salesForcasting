@@ -102,11 +102,14 @@ function NewDealForm({ url, newDealHandler }) {
                 <span className="marquee" aria-hidden>Add Deal</span></button>}>
 
                 <form onSubmit={handleSubmit} >
+                    <div>
+                        <p>Last Update:</p>
+                    </div>
                     <input className="form-element" onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
                     <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
 
                     <div className="button-text">
-                        <p>Choose a rep:</p>
+                        <p>Choose an rep:</p>
                     </div>
                     <ToggleButtonGroup
                         type="radio"
@@ -133,7 +136,9 @@ function NewDealForm({ url, newDealHandler }) {
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
                         placeholder="Select a Stage" className="form-element" /> */}
 
-                    <p>Select Stage of Sale</p>
+                    <div>
+                        <p>Select a Stage:</p>
+                    </div>
                     <ToggleButtonGroup
                         type="radio"
                         name="stage"
@@ -153,6 +158,9 @@ function NewDealForm({ url, newDealHandler }) {
                         ))}
                     </ToggleButtonGroup>
 
+                    <div>
+                        <p>Close Date:</p>
+                    </div>
                     <input className="form-element" onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
                     <button className="formButton" type="submit">Submit Deal</button>
                 </form>
