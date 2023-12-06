@@ -64,8 +64,8 @@ function NewDealForm({ url, newDealHandler }) {
         last_update: '',
         name: '',
         rep: '',
-        users: 0,
-        monthly_recurring_revenue: 0,
+        users: null,
+        monthly_recurring_revenue: null,
         close: '',
         stage_id: ''
     }
@@ -130,8 +130,8 @@ function NewDealForm({ url, newDealHandler }) {
                         ))}
                     </ToggleButtonGroup>
 
-                    <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Users" step="1" />
-                    <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="MRR" step="1" />
+                    <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Amount of Users" step="1" />
+                    <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="Monthly Recurring Revenue" step="1" />
                     {/* 
                     <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
                         placeholder="Select a Stage" className="form-element" /> */}
