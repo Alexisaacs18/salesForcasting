@@ -45,7 +45,7 @@ function StagePage() {
 
     return (
         <div className="StagePage">
-            <h2>Revnue in Each Stage</h2>
+            <h2>Revenue by Stage</h2>
             {totalMRRByRepArray.map((repData) => (
                 <h3 key={repData.stage}>{`${getStageNameById(repData.stage)}: $${repData.mrr}`}</h3>
             ))}
