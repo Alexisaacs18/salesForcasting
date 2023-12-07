@@ -1,5 +1,14 @@
 /* index.css */
 
+html {
+  height: 100%;
+  width: 100%;
+  background-image: url('../src/assets/dbackground.jpg');
+  background-size: cover;
+
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -95,15 +104,14 @@ code {
   padding-top: 1%;
   padding-bottom: 2%;
   text-align: center;
-  background-image: url('../src/assets/dbackground.jpg');
+
   background-size: cover;
 
 }
 
 .Pipeline {
   text-align: center;
-  background-color: rgb(187, 217, 248);
-  background-image: url('../src/assets/dbackground.jpg');
+
   background-size: cover;
 
 
@@ -178,23 +186,21 @@ code {
 
 .RepPage {
   text-align: center;
-  background-color: rgb(187, 217, 248);
-  background-image: url('../src/assets/dbackground.jpg');
+
   background-size: cover;
 }
 
 #root {
   text-align: center;
-  background-color: rgb(187, 217, 248);
-  background-image: url('../src/assets/dbackground.jpg');
+
   background-size: cover;
 }
 
 .StagePage {
   text-align: center;
-  background-color: rgb(221, 237, 252);
-  padding-top: 1%;
-  padding-bottom: 1%;
+
+  background-size: cover;
+
 }
 
 .form input {
