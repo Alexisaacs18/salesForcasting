@@ -40,7 +40,22 @@ function RepPage() {
 
     return (
         <div className="RepPage">
-            <h1>Sales Reps</h1>
+
+            <div class="waviySales">
+                <span style={{ '--i': 1 }}>S</span>
+                <span style={{ '--i': 2 }}>a</span>
+                <span style={{ '--i': 3 }}>l</span>
+                <span style={{ '--i': 4 }}>e</span>
+                <span style={{ '--i': 5 }}>s</span>
+                <span style={{ '--i': 6 }}>&nbsp;</span>
+                <span style={{ '--i': 7 }}>R</span>
+                <span style={{ '--i': 8 }}>e</span>
+                <span style={{ '--i': 9 }}>p</span>
+                <span style={{ '--i': 10 }}>s</span>
+
+            </div>
+
+
             {totalMRRByRepArray.map((repData) => (
                 <div>
                     <h2 key={repData.rep}>{`${repData.rep}: $${repData.mrr}`}</h2>

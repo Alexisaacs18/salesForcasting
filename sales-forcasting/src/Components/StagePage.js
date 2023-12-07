@@ -46,7 +46,7 @@ function StagePage() {
     return (
         <div className="StagePage">
             <h2>
-                <div className="waviy">
+                <div className="waviyRev">
                     <span style={{ '--i': 1 }}>S</span>
                     <span style={{ '--i': 2 }}>t</span>
                     <span style={{ '--i': 3 }}>a</span>

@@ -490,11 +490,11 @@ code {
   }
 }
 
-.waviy {
+.waviyRev {
   position: relative;
 }
 
-.waviy span {
+.waviyRev span {
   position: relative;
   display: inline-block;
   font-size: 40px;
@@ -509,5 +509,36 @@ code {
   0%,
   80% {
     transform: rotateY(360deg)
+  }
+}
+
+
+.waviySales {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  font-size: 60px;
+}
+
+.waviySales span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #8a1f1f;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes waviy {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-20px)
   }
 }
