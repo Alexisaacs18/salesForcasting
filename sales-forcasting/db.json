@@ -93,63 +93,20 @@
       "stage_id": 5,
       "close": "2023-12-06",
       "id": 9
-    },
-    {
-      "last_update": "2023-11-29",
-      "name": "css Test",
-      "rep": "Sean Innella",
-      "users": 400,
-      "monthly_recurring_revenue": 5,
-      "stage_id": 1,
-      "close": "2023-12-14",
-      "id": 10
-    },
-    {
-      "last_update": "2023-12-05",
-      "name": "Button-AI",
-      "rep": "Nick Sette",
-      "users": 15,
-      "monthly_recurring_revenue": 4600,
-      "stage_id": 1,
-      "close": "2023-12-05",
-      "id": 11
-    },
-    {
-      "last_update": "2023-12-21",
-      "name": "Reformat",
-      "rep": "Sean Innella",
-      "users": 15,
-      "monthly_recurring_revenue": 23,
-      "stage_id": 2,
-      "close": "2023-12-07",
-      "id": 12
-    },
-    {
-      "last_update": "2023-12-06",
-      "name": "Buttons IO",
-      "rep": "Nick Sette",
-      "users": 50,
-      "monthly_recurring_revenue": 5000,
-      "stage_id": 1,
-      "close": "2023-12-06",
-      "id": 13
     }
   ],
   "reps": [
     {
       "id": 1,
-      "name": "Alex Isaacs",
-      "monthly_recurring_revenue": 2549
+      "name": "Alex Isaacs"
     },
     {
       "id": 2,
-      "name": "Nick Sette",
-      "monthly_recurring_revenue": 249
+      "name": "Nick Sette"
     },
     {
       "id": 3,
-      "name": "Sean Innella",
-      "monthly_recurring_revenue": 1964
+      "name": "Sean Innella"
     }
   ],
   "stages": [
