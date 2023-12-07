@@ -317,6 +317,18 @@ code {
   content: "💿";
 }
 
+#pattern5 input[type="radio"]:nth-of-type(4)::before {
+  content: "💿";
+}
+
+#pattern5 input[type="radio"]:nth-of-type(5)::before {
+  content: "💿";
+}
+
+#pattern5 input[type="radio"]:nth-of-type(6)::before {
+  content: "💿";
+}
+
 #pattern5 input[type="radio"]:checked::before {
   opacity: 1;
   animation: rotation 1s linear infinite;
