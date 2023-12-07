@@ -7,7 +7,7 @@ import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
 
 function NewDealForm({ url, newDealHandler }) {
-    // fetch call to the stages engpoint and save those values in state
+    // fetch call to the stages endpoint and save those values in state
     // use that state to populate a stage drop down in form
     // before our post call match our form
 

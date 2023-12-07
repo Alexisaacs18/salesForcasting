@@ -463,3 +463,14 @@ code {
   margin-bottom: 10px;
   /* Adjust spacing between text and buttons */
 }
+
+.Search input {
+  width: 75%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Search input::placeholder {
+  text-align: center;
+}
