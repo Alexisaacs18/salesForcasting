@@ -7,92 +7,102 @@
     {
       "id": 1,
       "last_update": "2023-12-06",
-      "name": "Slack-API",
+      "name": "Slack-AI",
       "rep": "Alex Isaacs",
       "users": 20,
       "monthly_recurring_revenue": 2549,
       "stage_id": 1,
-      "close": "2023-12-06"
+      "close": "2023-12-20"
     },
     {
       "id": 2,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-04",
       "name": "SalesForce-NS",
       "rep": "Nick Sette",
       "users": 3,
       "monthly_recurring_revenue": 249,
-      "stage_id": 1,
-      "close": "2023-12-06"
+      "stage_id": 2,
+      "close": "2023-12-13"
     },
     {
       "id": 3,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-01",
       "name": "SalesLoft-SI",
       "rep": "Sean Innella",
       "users": 18,
       "monthly_recurring_revenue": 1469,
       "stage_id": 3,
-      "close": "2023-12-06"
+      "close": "2023-12-15"
     },
     {
       "id": 4,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-05",
       "name": "Gong-NS",
       "rep": "Nick Sette",
       "users": 10,
       "monthly_recurring_revenue": 945,
-      "stage_id": 2,
-      "close": "2023-12-06"
+      "stage_id": 5,
+      "close": "2023-12-05"
     },
     {
       "id": 5,
-      "last_update": "2023-12-12",
+      "last_update": "2023-12-07",
       "name": "Outreach-AI",
       "rep": "Alex Isaacs",
       "users": 35,
       "monthly_recurring_revenue": 3500,
-      "stage_id": 3,
-      "close": "2023-12-06"
+      "stage_id": 4,
+      "close": "2023-12-08"
     },
     {
       "id": 6,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-04",
       "name": "SalesForce-SI",
       "rep": "Sean Innella",
       "users": 5,
       "monthly_recurring_revenue": 495,
-      "stage_id": 4,
-      "close": "2023-12-06"
+      "stage_id": 6,
+      "close": "2023-12-04"
     },
     {
       "id": 7,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-07",
       "name": "Lavender-NS",
       "rep": "Nick Sette",
       "users": 7,
       "monthly_recurring_revenue": 693,
       "stage_id": 1,
-      "close": "2023-12-06"
+      "close": "2023-12-28"
     },
     {
       "id": 8,
-      "last_update": "2023-12-06",
+      "last_update": "2023-12-05",
       "name": "Trellus-AI",
       "rep": "Alex Isaacs",
       "users": 3,
       "monthly_recurring_revenue": 249,
-      "stage_id": 2,
-      "close": "2023-12-06"
+      "stage_id": 3,
+      "close": "2023-12-19"
     },
     {
-      "last_update": "2023-12-06",
+      "last_update": "2023-11-30",
       "name": "Apollo-NS",
       "rep": "Nick Sette",
       "users": 15,
       "monthly_recurring_revenue": 4500,
-      "stage_id": 2,
-      "close": "2023-12-06",
+      "stage_id": 3,
+      "close": "2023-12-11",
       "id": 9
+    },
+    {
+      "last_update": "2023-12-07",
+      "name": "TripleWhale-NS",
+      "rep": "Nick Sette",
+      "users": 5,
+      "monthly_recurring_revenue": 495,
+      "stage_id": 2,
+      "close": "2023-12-12",
+      "id": 10
     }
   ],
   "reps": [
