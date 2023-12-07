@@ -6,6 +6,8 @@ function Deal() {
     const location = useLocation();
     const deal = location.state; // Access the state directly
 
+    console.log(deal)
+
     const formOutline = {
         id: deal.id,
         last_update: deal.last_update,
@@ -17,9 +19,13 @@ function Deal() {
         stage_id: deal.stage_id
     }
 
+
     const [form, setForm] = useState(formOutline)
     const [formStage, setFormStage] = useState([])
     const [rep, setRep] = useState([])
+
+    console.log(form)
+
 
     const dealsUrl = "http://localhost:3001/deals"
     const repsUrl = "http://localhost:3001/reps"
@@ -146,7 +152,7 @@ function Deal() {
                     <ToggleButtonGroup id="pattern5"
                         type="radio"
                         name="stage"
-                        value={form.formStage}
+                        value={form.stage_id}
                         onChange={handleStageChange}
                         style={{ display: 'flex', flexDirection: 'row', lineHeight: '1em', margin: 0, padding: 0 }}
 
