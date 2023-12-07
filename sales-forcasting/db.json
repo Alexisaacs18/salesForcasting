@@ -103,6 +103,26 @@
       "stage_id": 2,
       "close": "2023-12-12",
       "id": 10
+    },
+    {
+      "last_update": "2023-12-06",
+      "name": "LinkedIn-SI",
+      "rep": "Sean Innella",
+      "users": 20,
+      "monthly_recurring_revenue": 3000,
+      "stage_id": 4,
+      "close": "2023-12-15",
+      "id": 11
+    },
+    {
+      "last_update": "2023-12-05",
+      "name": "Facebook-NS",
+      "rep": "Nick Sette",
+      "users": 10,
+      "monthly_recurring_revenue": 2549,
+      "stage_id": 2,
+      "close": "2023-12-28",
+      "id": 12
     }
   ],
   "reps": [

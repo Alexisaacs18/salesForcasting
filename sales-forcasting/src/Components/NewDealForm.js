@@ -70,8 +70,8 @@ function NewDealForm({ url, newDealHandler }) {
         last_update: '',
         name: '',
         rep: '',
-        users: null,
-        monthly_recurring_revenue: null,
+        users: '',
+        monthly_recurring_revenue: '',
         close: '',
         stage_id: ''
     }
