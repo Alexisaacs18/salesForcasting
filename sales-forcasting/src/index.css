@@ -154,9 +154,6 @@ code {
   width: 150px;
 }
 
-.NewDealForm button:active {
-  transform: scale(0.95);
-}
 
 .form {
   padding-bottom: 1%;

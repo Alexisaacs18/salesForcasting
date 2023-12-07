@@ -37,7 +37,7 @@ function NewDealForm({ url, newDealHandler }) {
 
            // Check if the form is filled out
     if (!form.last_update || !form.name || !form.rep || !form.users || !form.monthly_recurring_revenue || !form.stage_id || !form.close) {
-        alert('Please fill out all fields before submitting.');
+        alert('Please fill out all fields before submitting deal.');
         return;
     }
 
