@@ -111,7 +111,7 @@ function NewDealForm({ url, newDealHandler }) {
                     <div className="button-text">
                         <p>Choose an rep:</p>
                     </div>
-                    <ToggleButtonGroup
+                    <ToggleButtonGroup id="pattern5"
                         type="radio"
                         name="rep"
                         value={form.rep}
@@ -139,7 +139,7 @@ function NewDealForm({ url, newDealHandler }) {
                     <div>
                         <p>Select a Stage:</p>
                     </div>
-                    <ToggleButtonGroup
+                    <ToggleButtonGroup id="pattern5"
                         type="radio"
                         name="stage"
                         value={form.formStage}

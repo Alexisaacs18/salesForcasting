@@ -110,7 +110,7 @@ function Deal() {
                     <div>
                         <p>Select a Rep:</p>
                     </div>
-                    <ToggleButtonGroup
+                    <ToggleButtonGroup id="pattern5"
                         type="radio"
                         name="rep"
                         value={form.rep}
@@ -140,7 +140,7 @@ function Deal() {
                     <div>
                         <p>Select a Stage:</p>
                     </div>
-                    <ToggleButtonGroup
+                    <ToggleButtonGroup id="pattern5"
                         type="radio"
                         name="stage"
                         value={form.formStage}
