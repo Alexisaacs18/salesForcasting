@@ -106,7 +106,7 @@ function NewDealForm({ url, newDealHandler }) {
                         <p>Last Update:</p>
                     </div>
                     <input className="form-element" onChange={handleChange} value={form.last_update} type="date" name="last_update" placeholder="Last Update" />
-                    <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Name" />
+                    <input className="form-element" onChange={handleChange} value={form.name} type="text" name="name" placeholder="Opportunity Name" />
 
                     <div className="button-text">
                         <p>Choose an rep:</p>
