@@ -45,7 +45,24 @@ function StagePage() {
 
     return (
         <div className="StagePage">
-            <h2>Revenue by Stage</h2>
+            <h2>
+                <div className="waviy">
+                    <span style={{ '--i': 1 }}>S</span>
+                    <span style={{ '--i': 2 }}>t</span>
+                    <span style={{ '--i': 3 }}>a</span>
+                    <span style={{ '--i': 4 }}>g</span>
+                    <span style={{ '--i': 5 }}>e</span>
+                    <span style={{ '--i': 6 }}>&nbsp;</span>
+                    <span style={{ '--i': 7 }}>R</span>
+                    <span style={{ '--i': 8 }}>e</span>
+                    <span style={{ '--i': 9 }}>v</span>
+                    <span style={{ '--i': 10 }}>e</span>
+                    <span style={{ '--i': 11 }}>n</span>
+                    <span style={{ '--i': 12 }}>u</span>
+                    <span style={{ '--i': 13 }}>e</span>
+                </div>
+            </h2>
+
             {totalMRRByRepArray.map((repData) => (
                 <h3 key={repData.stage}>{`${getStageNameById(repData.stage)}: $${repData.mrr}`}</h3>
             ))}
