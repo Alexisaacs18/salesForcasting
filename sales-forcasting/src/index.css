@@ -95,7 +95,7 @@ code {
   padding-top: 1%;
   padding-bottom: 2%;
   text-align: center;
-  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-image: url('../src/assets/dbackground.jpg');
   background-size: cover;
 
 }
@@ -103,7 +103,7 @@ code {
 .Pipeline {
   text-align: center;
   background-color: rgb(187, 217, 248);
-  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-image: url('../src/assets/dbackground.jpg');
   background-size: cover;
 
 

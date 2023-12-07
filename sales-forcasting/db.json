@@ -7,11 +7,11 @@
     {
       "id": 1,
       "last_update": "2023-12-06",
-      "name": "Slack-AP",
+      "name": "Slack-API",
       "rep": "Alex Isaacs",
       "users": 20,
       "monthly_recurring_revenue": 2549,
-      "stage_id": 5,
+      "stage_id": 1,
       "close": "2023-12-06"
     },
     {
