@@ -63,7 +63,10 @@ function Deal() {
         }).then(res => res.json())
             .then(data => {
                 console.log(data)
+                alert("Successfully Updated Deal!");
             })
+
+
     }
 
     function getStageNameById(id) {
@@ -162,7 +165,7 @@ function Deal() {
                     <label htmlFor="close">Close Date:</label>
                     <input onChange={handleChange} value={form.close} type="date" name="close" placeholder="Close Date" />
 
-                    <button type="submit">Update Deal</button>
+                    <button className="formButton" type="submit">Update Deal</button>
                 </form>
             </div>
         </div>
