@@ -35,6 +35,12 @@ function NewDealForm({ url, newDealHandler }) {
     function handleSubmit(e) {
         e.preventDefault()
 
+           // Check if the form is filled out
+    if (!form.last_update || !form.name || !form.rep || !form.users || !form.monthly_recurring_revenue || !form.stage_id || !form.close) {
+        alert('Please fill out all fields before submitting.');
+        return;
+    }
+
         const postedData = {
             last_update: form.last_update,
             name: form.name,
