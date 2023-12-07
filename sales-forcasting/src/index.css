@@ -178,9 +178,16 @@ code {
 
 .RepPage {
   text-align: center;
-  background-color: rgb(221, 237, 252);
-  padding-top: 1%;
-  padding-bottom: 1%;
+  background-color: rgb(187, 217, 248);
+  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-size: cover;
+}
+
+#root {
+  text-align: center;
+  background-color: rgb(187, 217, 248);
+  background-image: url('/home/sette94/Development/code/phase-2/salesForcasting/sales-forcasting/src/assets/dbackground.jpg');
+  background-size: cover;
 }
 
 .StagePage {
