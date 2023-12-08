@@ -221,6 +221,10 @@ code {
   border-radius: 8px;
 }
 
+.formButton:active {
+  transform: scale(0.95);
+}
+
 /* Updated styles for NewDealForm */
 
 
