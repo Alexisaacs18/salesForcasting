@@ -7,17 +7,11 @@ import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
 
 function NewDealForm({ url, newDealHandler }) {
-    // fetch call to the stages endpoint and save those values in state
-    // use that state to populate a stage drop down in form
-    // before our post call match our form
-
     const stageUrl = "http://localhost:3001/stages"
     const repsUrl = "http://localhost:3001/reps"
 
     const [formStage, setFormStage] = useState([])
     const [rep, setRep] = useState([])
-
-
 
     useEffect(() => {
         fetch(stageUrl)
@@ -35,7 +29,6 @@ function NewDealForm({ url, newDealHandler }) {
     function handleSubmit(e) {
         e.preventDefault()
 
-        // Check if the form is filled out
         if (!form.last_update || !form.name || !form.rep || !form.users || !form.monthly_recurring_revenue || !form.stage_id || !form.close) {
             alert('Please fill out all fields before submitting deal.');
             return;
@@ -76,7 +69,6 @@ function NewDealForm({ url, newDealHandler }) {
         stage_id: ''
     }
 
-    //When doing the post call, parse id from stageInfo 
 
     const [form, setForm] = useState(formOutline)
 
@@ -138,9 +130,7 @@ function NewDealForm({ url, newDealHandler }) {
 
                     <input className='form-element' onChange={handleChange} value={form.users} type="number" name="users" placeholder="Amount of Users" step="1" />
                     <input className="form-element" onChange={handleChange} value={form.monthly_recurring_revenue} type="number" name="monthly_recurring_revenue" placeholder="Monthly Recurring Revenue" step="1" />
-                    {/* 
-                    <Dropdown value={form.stageInfo} name="stageInfo" onChange={handleChange} options={formStage} optionLabel="name"
-                        placeholder="Select a Stage" className="form-element" /> */}
+
 
                     <div>
                         <p>Select a Stage:</p>
@@ -155,9 +145,9 @@ function NewDealForm({ url, newDealHandler }) {
                     >
                         {formStage.map((repOption) => (
                             <ToggleButton
-                                key={repOption.id}  // Make sure each option has a unique key
-                                value={repOption.id}  // Use the appropriate property from your 'rep' array
-                                variant="light"  // You can customize the appearance by changing the variant
+                                key={repOption.id}
+                                value={repOption.id}
+                                variant="light"
                             >
                                 {repOption.name}
                             </ToggleButton>
